@@ -22,7 +22,7 @@ for(const [file,html] of Object.entries(documents)){
     if(anchor){const targetHtml=documents[target];if(!targetHtml?.includes(`id="${anchor}"`))errors.push(`${file}: missing #${anchor} in ${target}`);}
   }
   for(const m of html.matchAll(/<img\b[^>]+>/g))if(!m[0].includes('alt='))errors.push(`${file}: image has no alt`);
-  for(const m of html.matchAll(/<textarea\b[^>]*id="([^"]+)"/g))if(!html.includes(`for="${m[1]}"`))errors.push(`${file}: note field has no label`);
+  if(/<form\b|<textarea\b|<input\b|id="notebook"|href="#notebook"|data-record=|home-progress/.test(html))errors.push(`${file}: reading-only page contains notebook controls`);
   for(const m of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g))if(!m[0].includes('noopener'))errors.push(`${file}: external link missing noopener`);
 }
 for(const f of (await readdir(path.join(dist,'assets'))).filter(f=>f.endsWith('.svg'))){
@@ -34,11 +34,12 @@ for(const t of topics){
   if(!html)errors.push(`Missing topic ${t.id}`);
   if(!/^[\w-]{11}$/.test(t.video.id))errors.push(`${t.id}: missing video ID`);
   if((html.match(/class="reading-section"/g)||[]).length!==5)errors.push(`${t.id}: missing reading sections`);
-  if((html.match(/<textarea /g)||[]).length!==6)errors.push(`${t.id}: missing note fields`);
   if(!html.includes('youtube-nocookie.com/embed/'))errors.push(`${t.id}: no embedded video`);
   if(!html.includes('referrerpolicy="strict-origin-when-cross-origin"'))errors.push(`${t.id}: missing video referrer`);
-  if(html.indexOf('id="video"')<html.indexOf('id="notebook"'))errors.push(`${t.id}: video must be last`);
-  console.log(`${t.name}: ${t.sections.reduce((n,s)=>n+s.paragraphs.join('').length,0)} characters, ${t.sections.length} reading sections, 6 note fields`);
+  if(html.indexOf('id="video"')<html.indexOf('id="read-5"'))errors.push(`${t.id}: video must be last`);
+  console.log(`${t.name}: ${t.sections.reduce((n,s)=>n+s.paragraphs.join('').length,0)} characters, ${t.sections.length} reading sections`);
 }
+const app=await readFile(path.join(dist,'assets','app.js'),'utf8');
+if(/localStorage|sessionStorage|notes-form|download-notes|copy-notes|window\.print/.test(app))errors.push('app.js: obsolete notebook behavior');
 execFileSync(process.execPath,['--check',path.join(dist,'assets','app.js')]);
-if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${pages.length} pages; internal links, anchors, assets, form labels, video placements and JavaScript syntax.`);
+if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${pages.length} pages; internal links, anchors, assets, reading-only pages, video placements and JavaScript syntax.`);
