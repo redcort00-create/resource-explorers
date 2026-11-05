@@ -51,3 +51,12 @@ npm run preview
 SVG 그림은 이 사이트를 위해 제작한 학습 도해입니다. 실제 시설의 축척·설계도가 아닙니다.
 
 영상은 YouTube 공식 외부 플레이어로 삽입했습니다. 영상 파일을 복제하거나 재배포하지 않습니다. 재생 권한은 업로더 설정에 따라 바뀔 수 있습니다. 실제 외부 재생 검증 결과는 `VERIFICATION.md`에 기록합니다.
+
+## 숲가꾸기 실제 참고 사진
+
+산림 자원 03번 소주제에 미국 산림청 연구림의 실제 사진 2장을 넣었습니다. 사진은 각각 다른 지점의 솎아베기 전·후 사례이며 동일한 장소의 시점 비교가 아닙니다. 사진은 잘라내지 않고 원본 비율로 표시합니다.
+
+- 출처: [USDA Forest Service · Photo Tour: Variable Density Thinning Study](https://research.fs.usda.gov/psw/products/multimedia/photos/photo-tour-variable-density-thinning-study)
+- 원본: psw-vdpt001.jpg(작업 전), psw-vdpt007.jpg(솎아베기 뒤)
+- 사진 파일: src/photos/ 및 dist/assets/photos/
+- 각 사진 설명, 대체 텍스트, 원문 출처 링크, 크게 보기 링크를 제공합니다.

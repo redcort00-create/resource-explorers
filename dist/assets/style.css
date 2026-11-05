@@ -123,3 +123,20 @@
 
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*{transition:none!important}.topic-card:hover{transform:none}}
 @media print{body{background:white;color:#111;font-family:"Malgun Gothic",sans-serif;font-size:10pt;word-break:normal}.site-header,.footer,.article-sidebar,.breadcrumb,.other-topics,.note-actions,.save-info,.note-help,.toast,.skip,.video-frame,.complete-label input,.home-hero .button,.record-badge,.teacher{display:none!important}main{max-width:none;padding:0}.article-hero{display:block;padding:0 0 18px;border-bottom:1px solid #bbb}.article-hero h1{font-size:24pt}.article-hero figure{max-width:440px;margin:15px auto;background:#fff}.article-intro{font-size:11pt}.article-hero .text-link{display:none}.article-layout{display:block;padding-top:25px}.reading-body{max-width:none}.reading-section{break-inside:auto;margin-bottom:20px;padding-bottom:20px}.reading-heading{break-after:avoid}.reading-heading h2{font-size:16pt}.reading-section>p{font-size:11pt;line-height:1.8;orphans:3;widows:3}.inquiry,.think,.word-box,.compare>div,.flow li{background:#f6f6f6;break-inside:avoid}.notebook{background:white;border:1px solid #aaa;padding:20px;break-before:page;break-inside:auto}.fields{display:block}.field{margin-bottom:15px;break-inside:avoid}.field label{font-size:11pt}.field textarea{display:none}.print-answer{display:block;white-space:pre-wrap;overflow-wrap:anywhere;min-height:65px;font-size:11pt;border-bottom:1px solid #ccc;line-height:1.8;padding-bottom:8px}.source-record{font-size:9pt}.complete-label{font-size:10pt}.video-section{break-inside:avoid}.video-section .text-link:after{content:" " attr(href);font-size:9pt;word-break:break-all}.home-hero{min-height:auto}.home-hero h1{font-size:30pt}.topic-grid{grid-template-columns:1fr 1fr}.topic-card{break-inside:avoid}.card-art img{height:160px}.card-art{min-height:180px}.card-copy p{font-size:10pt}.how-to{grid-template-columns:1fr}.how-to ol{grid-template-columns:repeat(3,1fr)}.home-note{background:#f6f6f6}.topic-section{padding-top:25px}}
+
+/* Real reference photographs in reading sections */
+.reference-photos{margin:28px 0 30px;padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+.reference-photos>.eyebrow{margin:0 0 16px;color:var(--accent)}
+.reference-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.reference-photo-grid figure{min-width:0;margin:0}
+.reference-photo-grid figure>a{display:block;border-radius:8px;overflow:hidden}
+.reference-photo-grid figure>a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.reference-photo-grid img{display:block;width:100%;height:auto;aspect-ratio:1400/930}
+.reference-photo-grid figcaption{padding-top:12px}
+.reference-photo-grid figcaption strong{display:block;font-size:15px;line-height:1.6;color:var(--accent)}
+.reference-photo-grid figcaption span{display:block;margin-top:5px;font-size:13px;line-height:1.85}
+.reference-photos .photo-note{margin:17px 0 7px;font-size:12px;line-height:1.9;color:var(--muted)}
+.reference-photos .photo-credit{margin:0;font-size:11px;line-height:1.9;color:var(--muted);overflow-wrap:anywhere}
+.photo-credit a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:720px){.reference-photos{padding:17px}.reference-photo-grid{grid-template-columns:1fr;gap:23px}.reference-photo-grid figcaption strong{font-size:14px}}
+@media print{.reference-photos{padding:12px;break-inside:avoid;background:#fff}.reference-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.reference-photo-grid figcaption strong{font-size:10pt}.reference-photo-grid figcaption span,.reference-photos .photo-note{font-size:9pt}.reference-photos .photo-credit{font-size:8pt}}
