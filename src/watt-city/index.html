@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#edf3e4">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="선생님께 받은 비밀번호를 입력하고 와트시티로 출발해요.">
+  <title>와트시티 입장 · 지구를 잇는 탐구실</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/watt-city-gate.css">
+  <script src="assets/watt-city-gate.js" defer></script>
+</head>
+<body>
+  <main class="entry">
+    <a class="back" href="index.html#game-entry">← 지구를 잇는 탐구실</a>
+    <div class="entry-grid">
+      <section class="welcome" aria-label="와트시티 소개">
+        <p class="eyebrow">전기를 만들고 도시를 키워요</p>
+        <h1>와트시티 <span>WATT CITY</span></h1>
+        <img src="assets/watt-city.svg" alt="태양광과 풍력으로 전기를 만드는 와트시티" width="360" height="240">
+      </section>
+      <section class="entry-card" aria-labelledby="entry-heading">
+        <p class="eyebrow">도시로 출발할 준비가 됐나요?</p>
+        <h2 id="entry-heading">비밀번호를 입력해 주세요</h2>
+        <p>선생님께 받은 비밀번호를 입력하면<br>와트시티 게임 링크가 활성화돼요.</p>
+        <form id="entry-form" autocomplete="off">
+          <label for="access-code">비밀번호</label>
+          <div class="input-row">
+            <input type="password" id="access-code" name="access-code" required minlength="6" maxlength="6" inputmode="numeric" pattern="[0-9]{6}" autocomplete="off" placeholder="숫자 6자리" aria-describedby="entry-message">
+            <button type="button" id="reveal" aria-label="비밀번호 보이기" aria-pressed="false">보기</button>
+          </div>
+          <button class="activate-button" id="enter-button" type="submit">게임 링크 활성화하기</button>
+        </form>
+        <p id="entry-message" role="status" aria-live="polite"></p>
+        <a class="game-link" id="game-link" role="link" aria-disabled="true" tabindex="-1">와트시티로 이동하기 ↗</a>
+        <noscript>게임 링크를 활성화하려면 JavaScript를 켜 주세요.</noscript>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

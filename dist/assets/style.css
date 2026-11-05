@@ -146,13 +146,16 @@
 
 
 /* The classroom game's entry lives at the very bottom of the homepage. */
-.game-bottom{margin:42px 0 20px}
-.game-bottom-link{display:flex;align-items:center;justify-content:center;gap:32px;min-height:220px;padding:25px 38px;background:linear-gradient(120deg,#e1efdf,#dceff0);border:1px solid #b8d2bd;border-radius:24px;transition:transform .18s,box-shadow .18s}
+.game-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin:42px 0 20px}
+.game-bottom-link{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:12px;min-width:0;padding:25px 24px 30px;text-align:center;background:linear-gradient(120deg,#e1efdf,#dceff0);border:1px solid #b8d2bd;border-radius:24px;transition:transform .18s,box-shadow .18s}
 .game-bottom-link:hover{transform:translateY(-3px);box-shadow:0 12px 28px #254f3414}
 .game-bottom-link>img{width:215px;height:145px;object-fit:contain;flex-shrink:0}
-.game-bottom-copy{display:block}
+.game-bottom-copy{display:flex;flex-direction:column;align-items:center;flex:1;width:100%}
 .game-bottom-eyebrow{display:block;font-size:16px;font-weight:700;color:#628267;margin-bottom:6px}
-.game-bottom-copy>strong{display:block;font-size:clamp(23px,2.6vw,31px);line-height:1.55;letter-spacing:-.045em;color:#264e3b}
-.game-bottom-start{display:inline-flex;align-items:center;gap:40px;background:#355f43;color:#fffef8;padding:10px 22px;border-radius:30px;font-size:18px;font-weight:750;margin-top:17px}
-@media(max-width:720px){.game-bottom{margin-top:30px}.game-bottom-link{gap:16px;padding:23px 18px;min-height:190px}.game-bottom-link>img{width:135px;height:110px}.game-bottom-eyebrow{font-size:12px}.game-bottom-copy>strong{font-size:20px}.game-bottom-start{font-size:15px;padding:8px 17px;gap:22px;margin-top:12px}}
-@media(max-width:440px){.game-bottom-link{flex-direction:column;gap:4px;text-align:center}.game-bottom-link>img{width:170px;height:115px}.game-bottom-eyebrow{font-size:13px}.game-bottom-copy>strong{font-size:21px}}
+.game-bottom-copy>strong{display:flex;flex-direction:column;justify-content:center;min-height:84px;font-size:clamp(23px,2.4vw,29px);line-height:1.45;letter-spacing:-.045em;color:#264e3b}
+.game-bottom-copy>strong small{display:block;font-size:15px;letter-spacing:.12em;font-weight:600;color:#597c68;margin-top:3px}
+.game-bottom-start{display:inline-flex;align-items:center;justify-content:center;gap:28px;background:#355f43;color:#fffef8;min-height:48px;padding:10px 22px;border-radius:30px;font-size:18px;font-weight:750;margin-top:17px}
+.watt-city-link{background:linear-gradient(120deg,#edf0ce,#dceee7)}
+@media(max-width:720px){.game-bottom{grid-template-columns:1fr;margin-top:30px;gap:23px}.game-bottom-link{flex-direction:row;gap:16px;padding:23px 18px;text-align:left;align-items:center}.game-bottom-link>img{width:135px;height:110px}.game-bottom-copy{align-items:flex-start}.game-bottom-eyebrow{font-size:14px}.game-bottom-copy>strong{font-size:23px;min-height:0}.game-bottom-start{font-size:16px;padding:8px 17px;gap:22px;margin-top:12px}}
+@media(max-width:440px){.game-bottom-link{flex-direction:column;gap:4px;text-align:center}.game-bottom-copy{align-items:center}.game-bottom-link>img{width:190px;height:127px}.game-bottom-eyebrow{font-size:14px}.game-bottom-copy>strong{font-size:23px}}
+@media(prefers-reduced-motion:reduce){.game-bottom-link{transition:none}.game-bottom-link:hover{transform:none}}

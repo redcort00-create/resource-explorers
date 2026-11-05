@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 240" role="img" aria-label="태양광과 풍력으로 전기를 만드는 와트시티">
+<ellipse cx="180" cy="211" rx="150" ry="16" fill="#c2ddd1"/>
+<circle cx="288" cy="49" r="23" fill="#f3cf61"/>
+<g stroke="#f3cf61" stroke-width="4" stroke-linecap="round"><path d="M288 13v-8m0 88v-8m36-36h8m-88 0h8m61-25 6-6m-62 62 6-6m0-50-6-6m62 62-6-6"/></g>
+<path d="M36 206h289" fill="none" stroke="#355f43" stroke-width="5" stroke-linecap="round"/>
+<rect x="132" y="67" width="70" height="137" rx="7" fill="#508d91"/>
+<rect x="215" y="113" width="60" height="91" rx="6" fill="#8bad72"/>
+<path d="m207 113 39-28 37 28" fill="#3b6961"/>
+<rect x="68" y="145" width="52" height="59" rx="5" fill="#d1b06f"/>
+<g fill="#f8edba"><path d="M146 82h13v17h-13zm28 0h13v17h-13zm-28 29h13v17h-13zm28 0h13v17h-13zm-28 29h13v17h-13zm28 0h13v17h-13zm53-12h12v17h-12zm23 0h12v17h-12zm-23 29h12v17h-12zm23 0h12v17h-12z"/><rect x="81" y="161" width="13" height="17" rx="2"/></g>
+<path d="m58 143 16-27h50l-15 27z" fill="#315e71" stroke="#e5f3e8" stroke-width="3"/>
+<path d="m69 130 48 0m-27-14-15 27m31-27-15 27" fill="none" stroke="#97c9d0" stroke-width="2"/>
+<g stroke="#567c70" stroke-width="5" stroke-linecap="round"><path d="M35 114v91m0-91-20-35m20 35 34-20m-34 20-3 38"/></g>
+<circle cx="35" cy="114" r="6" fill="#f1ca5e"/>
+<path d="m187 18-20 31h18l-8 25 27-35h-18l13-21z" fill="#edbf47"/>
+<path d="M294 206v-28" stroke="#355f43" stroke-width="5"/>
+<circle cx="294" cy="164" r="23" fill="#63946f"/>
+</svg>
