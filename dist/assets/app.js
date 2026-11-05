@@ -125,6 +125,6 @@
       const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];
       if(visible) links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+visible.target.id));
     },{rootMargin:'-8% 0px -62% 0px',threshold:0});
-    document.querySelectorAll('.reading-section,#notebook,#sources,#video').forEach(s=>observer.observe(s));
+    document.querySelectorAll('.reading-section,#notebook,#video').forEach(s=>observer.observe(s));
   }
 })();

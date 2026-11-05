@@ -37,7 +37,7 @@ for(const t of topics){
   if((html.match(/<textarea /g)||[]).length!==6)errors.push(`${t.id}: missing note fields`);
   if(!html.includes('youtube-nocookie.com/embed/'))errors.push(`${t.id}: no embedded video`);
   if(!html.includes('referrerpolicy="strict-origin-when-cross-origin"'))errors.push(`${t.id}: missing video referrer`);
-  if(html.indexOf('id="video"')<html.indexOf('id="sources"'))errors.push(`${t.id}: video must be last`);
+  if(html.indexOf('id="video"')<html.indexOf('id="notebook"'))errors.push(`${t.id}: video must be last`);
   console.log(`${t.name}: ${t.sections.reduce((n,s)=>n+s.paragraphs.join('').length,0)} characters, ${t.sections.length} reading sections, 6 note fields`);
 }
 execFileSync(process.execPath,['--check',path.join(dist,'assets','app.js')]);
