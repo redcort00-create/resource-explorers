@@ -144,3 +144,15 @@
 .hero-image-note { display: block; margin-top: 5px; font-size: 11px; font-weight: 400; letter-spacing: .03em; color: var(--muted); }
 @media(max-width:720px) { .hero-art-illustration { margin-top: 24px; padding: 0; } .hero-art-illustration figcaption { margin-top: 12px; } }
 
+
+/* The classroom game's entry lives at the very bottom of the homepage. */
+.game-bottom{margin:42px 0 20px}
+.game-bottom-link{display:flex;align-items:center;justify-content:center;gap:32px;min-height:220px;padding:25px 38px;background:linear-gradient(120deg,#e1efdf,#dceff0);border:1px solid #b8d2bd;border-radius:24px;transition:transform .18s,box-shadow .18s}
+.game-bottom-link:hover{transform:translateY(-3px);box-shadow:0 12px 28px #254f3414}
+.game-bottom-link>img{width:215px;height:145px;object-fit:contain;flex-shrink:0}
+.game-bottom-copy{display:block}
+.game-bottom-eyebrow{display:block;font-size:16px;font-weight:700;color:#628267;margin-bottom:6px}
+.game-bottom-copy>strong{display:block;font-size:clamp(23px,2.6vw,31px);line-height:1.55;letter-spacing:-.045em;color:#264e3b}
+.game-bottom-start{display:inline-flex;align-items:center;gap:40px;background:#355f43;color:#fffef8;padding:10px 22px;border-radius:30px;font-size:18px;font-weight:750;margin-top:17px}
+@media(max-width:720px){.game-bottom{margin-top:30px}.game-bottom-link{gap:16px;padding:23px 18px;min-height:190px}.game-bottom-link>img{width:135px;height:110px}.game-bottom-eyebrow{font-size:12px}.game-bottom-copy>strong{font-size:20px}.game-bottom-start{font-size:15px;padding:8px 17px;gap:22px;margin-top:12px}}
+@media(max-width:440px){.game-bottom-link{flex-direction:column;gap:4px;text-align:center}.game-bottom-link>img{width:170px;height:115px}.game-bottom-eyebrow{font-size:13px}.game-bottom-copy>strong{font-size:21px}}
